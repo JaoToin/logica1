@@ -6,14 +6,14 @@ const divResultado = document.querySelector('#resultado')
 formDados.addEventListener('submit', (evt) => {
     evt.preventDefault()
 
-    const form_num = new    FormData(formDados)
+    const form_num = new FormData(formDados)
 
-    let num1 = parseFloat(form_num.get('num1'))
-    let num2 = parseFloat(form_num.get('num2'))
-    let num3 = parseFloat(form_num.get('num3'))
+    var num1 = parseFloat(form_num.get('num1'))
+    var num2 = parseFloat(form_num.get('num2'))
+    var num3 = parseFloat(form_num.get('num3'))
 
 
-    let media = (parseFloat(num1) + parseFloat(num2) + parseFloat(num3)) / parseFloat(3)
+    var media = (parseFloat(num1 + num2 + num3)) / parseFloat(3)
 
     divResultado.innerHTML = `A media do s números ${media.toFixed(2).replace('.',',')}`
 })
