@@ -9,12 +9,11 @@ formDados.addEventListener('submit', (evt) => {
     const form_num = new FormData(formDados)
 
     var num1 = parseFloat(form_num.get('num1'))
-    var num2 = parseFloat(form_num.get('num2'))
+    
+    if(num1 % 3 === 0 && num1 % 7 === 0){
+        divResultado.innerHTML = `o numero ${num1} é divisivel por 3 e 7`
+    } else {
+        divResultado.innerHTML = `o numero ${num1} não é divisivel`
+    }
 
-
-    var multiplicaçao = (parseFloat(num1 * num2))
-
-
-
-    divResultado.innerHTML = `A área é ${multiplicaçao.toFixed(2).replace('.',',')} metros quadrados. são necessarios ${multiplicaçao / 2}l`
 })
